@@ -64,7 +64,13 @@ export const Experience = () => {
 
   return (
     <>
-      <OrbitControls />
+      <OrbitControls 
+        target={[0, 0.35, 0.17]}
+        maxPolarAngle={1.45}
+        minDistance={2.8}
+        maxDistance={8}
+        enablePan={false}
+      />
 
       <Boids boundaries={responsiveBoundaries} />
       <mesh visible={boundaryConfig.debug}>
